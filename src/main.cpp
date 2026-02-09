@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "ui.h"
+#include "display.h"
 #include "sd.h"
 #include "dustsensor.h"
 #include "time.h"
