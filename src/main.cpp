@@ -1,9 +1,9 @@
 #include <Arduino.h>
-#include "ui.h"
+#include "display.h"
 #include "sd.h"
 #include "dustsensor.h"
 #include "time.h"
-#include "tempsensor.h"
+#include "temp_hum_sensor.h"
 
 void setup() {
   // put your setup code here, to run once:

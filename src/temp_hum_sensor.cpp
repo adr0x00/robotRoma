@@ -5,7 +5,7 @@ DHT11 dht11(2);
 /*  Функция считывает значения температуры с датчика DHT11. Выполняет одно измерение.
  *  возвращает true если данные успешно считаны, false если произошла ошибка чтения датчика
  */
-bool Temperature(void)
+int Temperature(void)
 {
     // Попытка считать значения температуры с датчика DHT11. 
     int temperature = dht11.readTemperature();
@@ -17,16 +17,18 @@ bool Temperature(void)
         Serial.print("Температура: ");
         Serial.print(temperature);
         Serial.println(" °C");
+        return temperature;
     } else {
         // Вывод ошибки
         Serial.println("Ошибка инициализации датчика температуры");
+        return 0; // Возвращаем 0 или можно использовать другой код для обозначения ошибки
     }
 }
 
 /*  Функция считывает значения влажности с датчика DHT11. Выполняет одно измерение.
  *  возвращает true если данные успешно считаны, false если произошла ошибка чтения датчика
  */
-bool Humidity(void)
+int Humidity(void)
 {
     // Попытка считать значения влажности с датчика DHT11.
     int humidity = dht11.readHumidity();
@@ -38,9 +40,11 @@ bool Humidity(void)
         Serial.print("Влажность: ");
         Serial.print(humidity);
         Serial.println(" %");
+        return humidity;
     } else {
         // Print error message based on the error code.
         Serial.println("Ошибка инициализации датчика влажности");
+        return 0; // Возвращаем 0 или можно использовать другой код для обозначения ошибки
     }
 
 }

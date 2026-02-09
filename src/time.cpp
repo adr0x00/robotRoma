@@ -1,13 +1,14 @@
 #include "time.h"
 
-GyverDS3231 rtc;
+RTC_DS3231 rtc;         // Создаем объект для работы с RTC
+
 /*  Функция инициализрует время 
  *  возвращает true при успешной инициализации, false при ошибке шины или после сброса питания RTC 
  */
-bool TimeInit(void)
+bool RTC_Init(void)
 {
     Serial.print("Инициализациия RTC модуля: ");
-    setStampZone(3);  // часовой пояс
+
     if (rtc.begin()){
         Serial.println("Успешная инициализации RTC модуля");
         return true;
