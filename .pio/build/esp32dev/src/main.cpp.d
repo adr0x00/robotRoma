@@ -230,7 +230,9 @@
  .pio/libdeps/esp32dev/TFT_eSPI/Fonts/Custom/Yellowtail_32.h \
  .pio/libdeps/esp32dev/TFT_eSPI/Extensions/Smooth_font.h \
  .pio/libdeps/esp32dev/TFT_eSPI/Extensions/Button.h \
- .pio/libdeps/esp32dev/TFT_eSPI/Extensions/Sprite.h include/sd.h \
+ .pio/libdeps/esp32dev/TFT_eSPI/Extensions/Sprite.h \
+ /Users/romanbenca/.platformio/packages/framework-arduinoespressif32/libraries/SD/src/sd.h \
+ /Users/romanbenca/.platformio/packages/framework-arduinoespressif32/libraries/SD/src/sd_defines.h \
  include/dustsensor.h \
  .pio/libdeps/esp32dev/Sharp\ GP2Y\ Dust\ Sensor/GP2YDustSensor.h \
  include/temp_hum_sensor.h .pio/libdeps/esp32dev/DHT11/src/DHT11.h \
